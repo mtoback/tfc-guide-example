@@ -1,4 +1,10 @@
 terraform {
+  backend "remote" {
+    organization = "smartbizloans-dev"
+    workspaces {
+      name = "tfc-guide-example"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
